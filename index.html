@@ -176,7 +176,7 @@ dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
 // nav
 $("#burger").onclick=()=>$("#links").classList.toggle("open");
 $("#links").onclick=()=>$("#links").classList.remove("open");
-// theme
+
 let th=null;
 $("#theme").onclick=()=>{const dark=th?th==="dark":!matchMedia("(prefers-color-scheme: light)").matches;th=dark?"light":"dark";document.documentElement.dataset.theme=th;try{localStorage.setItem("cortis-theme",th)}catch(e){}};
 try{const t=localStorage.getItem("cortis-theme");if(t){th=t;document.documentElement.dataset.theme=t}}catch(e){}
